@@ -1,4 +1,5 @@
 # website
+- create https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages
 - build https://github.com/ObrienlabsDev/ObrienlabsDev.github.io/deployments/github-pages
 - url https://obrienlabsdev.github.io
 
