@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Periodic Table Language Model</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <meta http-equiv="Content-Style-Type" content="text/css"/>
+    <meta http-equiv="expires" content="Wed, 26 Feb 1993 08:21:57 GMT"/>
+    <script language="javascript">
+    var c=1;
+    multiarray = [
+	[1,'H','Hydrogen','s'],
+	[2,'He','Helium','s'],
+	[3,'Li','Lithium','s'],
+	[4,'Be','Berylium','s'],
+	[5,'B','Boron','p'],
+	[6,'C','Carbon','p'],
+	[7,'N','Nitrogen','p'],
+	[8,'O','Oxygen','p'],
+	[9,'F','Flourine','p'],
+	[10,'Ne','Neon','p'],
+	[11,'Na','Sodium','s'],
+	[12,'Mg','Magnesium','s'],
+	[13,'Al','Aluminum','p'],
+	[14,'Si','Silicon','p'],
+	[15,'P','Phosphorus','p'],
+	[16,'S','Sulphur','p'],
+	[17,'Cl','Cloride','p'],
+	[18,'Ar','Argon','p'],
+	[19,'K','Potassium','s'],
+	[20,'Ca','Calcium','s'],
+	[21,'Sc','Scandium','d'],
+	[22,'Ti','Titanium','d'],
+	[23,'V','Vanadium','d'],
+	[24,'Cr','Chromium','d'],
+	[25,'Mn','Manganese','d'],
+	[26,'Fe','Iron','d'],
+	[27,'Co','Cobalt','d'],
+	[28,'Ni','Nickel','d'],
+	[29,'Cu','Copper','d'],
+	[30,'Zn','Zinc','d'],
+	[31,'Ga','Gallium','p'],
+	[32,'Ge','Germanium','p'],
+	[33,'As','Arsenic','p'],
+	[34,'Se','Selenium','p'],
+	[35,'Br','Bromine','p'],
+	[36,'Kr','Krypton','p'],
+	[37,'Rb','Rubidium','s'],
+	[38,'Sr','Strontium','s'],
+	[39,'Y','Yttrium','d'],
+	[40,'Zr','Zirconium','d'],
+	[41,'Nb','Niobium','d'],
+	[42,'Mo','Molybdenum','d'],
+	[43,'Tc','Technetium','d'],
+	[44,'Ru','Ruthenium','d'],
+	[45,'Rh','Rhodium','d'],
+	[46,'Pd','Palladium','d'],
+	[47,'Ag','Silver','d'],
+	[48,'Cd','Cadmium','d'],
+	[49,'In','Indium','p'],
+	[50,'Sn','Tin','p'],
+	[51,'Sb','Antimony','p'],
+	[52,'Te','Tellurium','p'],
+	[53,'I','Iodine','p'],
+	[54,'Xe','Xenon','p'],
+	[55,'Cs','Caesium','s'],
+	[56,'Ba','Barium','s'],
+	[57,'La','Lanthalium','f'],
+	[58,'Ce','Cerium','f'],
+	[59,'Pr','Praseodymium','f'],
+	[60,'Nd','Neodymium','f'],
+	[61,'Pm','Promethium','f'],
+	[62,'Sm','Samarium','f'],
+	[63,'Eu','Europium','f'],
+	[64,'Gd','Gadolinium','f'],
+	[65,'Tb','Terbium','f'],
+	[66,'Dy','Dysprosium','f'],
+	[67,'Ho','Holmium','f'],
+	[68,'Er','Erbium','f'],
+	[69,'Tm','Thulium','f'],
+	[70,'Yn','Ytterbium','f'],
+	[71,'Lu','Lutetium','d'],
+	[72,'Hf','Hafnium','d'],
+	[73,'Ta','Tantalium','d'],
+	[74,'W','Tungsten','d'],
+	[75,'Re','Rhenium','d'],
+	[76,'Os','Osmium','d'],
+	[77,'Ir','Iridium','d'],
+	[78,'Pt','Platinum','d'],
+	[79,'Au','Gold','d'],
+	[80,'Hg','Mercury','d'],
+	[81,'Ti','Thallium','p'],
+	[82,'Pb','Lead','p'],
+	[83,'Bi','Bismuth','p'],
+	[84,'Po','Polonium','p'],
+	[85,'At','Astatine','p'],
+	[86,'Rn','Radon','p'],
+	[87,'Fr','Francium','s'],
+	[88,'Ra','Radium','s'],
+	[89,'Ac','Actinium','f'],
+	[90,'Th','Thorium','f'],
+	[91,'Pa','Protactinium','f'],
+	[92,'U','Uranium','f'],
+	[93,'Np','Neptunium','f'],
+	[94,'Pu','Plutonium','f'],
+	[95,'Am','Americium','f'],
+	[96,'Cm','Curium','f'],
+	[97,'Bk','Berkelium','f'],
+	[98,'Cf','Californium','f'],
+	[99,'Es','Einsteinium','f'],
+	[100,'Fm','Fermium','f'],
+	[101,'Md','Mendelevium','f'],
+	[102,'No','Nobelium','f'],
+	[103,'Lr','Lawrencium','d'],
+	[104,'Rf','Rutherfordium','d'],
+	[105,'Db','Dubnium','d'],
+	[106,'Sg','Seaborgium','d'],
+	[107,'Bh','Bohrium','d'],
+	[108,'Hs','Hasnium','d'],
+	[109,'Mt','Meitnerium','d'],
+	[110,'Ds','Darmstadium','d'],
+	[111,'Rg','Roentgenium','d'],
+	[112,'Cn','Coperniciam','d'],
+	[113,'Nh','Nihonium','p'],
+	[114,'Fl','Flerovium','p'],
+	[115,'Mc','Moscovium','p'],
+	[116,'Lv','Livermorium','p'],
+	[117,'Ts','Tennessine','p'],
+	[118,'Og','Oganessom','p']
+	];
+
+
+	function render() {
+		source = "obrienlabs";
+		target = "";//VEsNa";
+		split = ['Ve','Es','Na'];
+		globalFound = false;
+		source = source.toUpperCase();
+		let adjacent = [];
+
+		// initialize arrays
+		for(x=0;x<source.length;x++) {
+			adjacent[x] = [];
+		}
+
+		// get adjacency matrix in 2 phases 1 char, 2 char)
+		for (x=0; x<source.length; x++) {
+			for (y=0; y<multiarray.length; y++) {
+				current = source[x].toUpperCase();
+				element = multiarray[y][1];
+				if(element.toUpperCase() == current) {
+					//document.write(element);
+					adjacent[x][y] = element;
+				}
+				if(x + 1 < source.length) {
+					current = source[x].toUpperCase() + source[x+1].toUpperCase();
+					alert(current);
+					if(element.toUpperCase() == current) {
+						//document.write(element);
+						adjacent[x][y] = element;
+					}
+				}
+			}
+		}
+
+		// get numbers on rows - goal is to reduce each row to a count of 1
+		// start with rows of 1
+		// iterate rows - for each n > 1 select in sequence and reduce subsequent valid rows
+		// display valid output sorted by cell size
+		//document.write(source);
+		for (x=0;x<source.length;x++) {
+			document.writeln("<br/>" + source[x]);
+			for (y=0;y<multiarray.length;y++) {
+				val = adjacent[x][y];
+				if(undefined != val) {
+					document.writeln(adjacent[x][y] + " ");
+				} else {
+					document.write("-  ");
+				}
+			}
+		}
+		document.writeln("<br/>end");
+	}
+
+
+	function render2() {
+		source = "obrienlabs";
+		target = "";//VEsNa";
+		split = ['Ve','Es','Na'];
+
+		globalFound = false;
+		source = source.toUpperCase();
+		for (let x = 0; x < source.length; x++) {
+			current = source[x];
+
+			// search 2 chars first
+			if(source.length - x > 1) {
+				current += source[x+1];
+				x+=1;
+			}
+			//document.write(current+ " ");
+			// check multi char first
+			// check single char next
+			//document.write(multiarray[2][2]);
+			localFound = false;
+			for (let y = 0; y < multiarray.length; y++) {
+				element = multiarray[y][1];
+				if(element.toUpperCase() == current.toUpperCase()) {
+					//document.write(multiarray[y][1]);
+					target+= multiarray[y][1] + ' ';
+					globalFound = true;
+					localFound = true;
+					// exit loop
+					y = multiarray.length;
+				}
+			}
+			//subTarget = '';
+			//subTarget = getElement(current);
+			//if(target != '') {
+			//	target += subTarget;
+			//	globalFound = true;
+			//	localFound = true;
+			//}
+			if(!localFound) {
+				// reset counter back 1 char
+				x = x - 1;
+				current = source[x];
+				for (let y = 0; y < multiarray.length; y++) {
+					element = multiarray[y][1];
+					if(element.toUpperCase() == current.toUpperCase()) {
+						//document.write(multiarray[y][1]);
+						target+= multiarray[y][1] + ' ';
+						globalFound = true;
+						localFound = true;
+						// exit loop
+						y = multiarray.length;
+					}
+				}
+			}
+			// default to current char
+			if(!localFound) {
+				target += current + ' ';
+			}
+			//document.write(current);
+		}
+
+		if(!globalFound) {
+			document.write(source + " = ");
+		} else {
+			document.write(source + " = " + target);
+		}
+	}
+
+
+	function getElement(current) {
+		target = '';
+		for (let y = 0; y < multiarray.length; y++) {
+			element = multiarray[y][1];
+			if(element.toUpperCase() == current.toUpperCase()) {
+				//document.write(multiarray[y][1]);
+				target+= multiarray[y][1];
+				globalFound = true;
+				localFound = true;
+				// exit loop
+				y = multiarray.length;
+			}
+		}
+		return target;
+	}
+
+    // http://en.wikipedia.org/wiki/Canvas_element
+
+	function start() {
+		render();
+	}
+
+    </script>
+</head>
+<body text="#ffffff" background_color="#303030" link="#33D033" vlink="#D030D0" alink="#D03000" onload="javascript:start();">
+
+<br/>
+</body>
+</html>
