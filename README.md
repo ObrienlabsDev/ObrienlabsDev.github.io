@@ -1,5 +1,6 @@
 # website
-website
+- build https://github.com/ObrienlabsDev/ObrienlabsDev.github.io/deployments/github-pages
+- url https://obrienlabsdev.github.io
 
 ## Downloading
 
